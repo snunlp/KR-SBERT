@@ -66,7 +66,7 @@ data['similarity'] = [
     for sent1, sent2 in tqdm(zip(vec1, vec2), total=len(data))
 ]
 
-data[['paraphrase', 'similarity']].to_csv('./paraphrase-results.csv')
+data[['paraphrase', 'similarity']].to_csv('paraphrase-results.csv')
 
 ```
 
