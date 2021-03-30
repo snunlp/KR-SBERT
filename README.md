@@ -27,7 +27,7 @@ $ mv ./pytorch_model.bin ./KR-SBERT/kr-sbert/0_Transformer/pytorch_model.bin
 
 ## How to use the KR-SBERT model in Python
 
-We recommend Python 3.6 or higher, [scikit-learn v0.23.2](https://scikit-learn.org/stable/install.html) or higher and [sentence-transformers v0.4.1] or higher.
+We recommend Python 3.6 or higher, [scikit-learn v0.23.2](https://scikit-learn.org/stable/install.html) or higher and [sentence-transformers v0.4.1](https://github.com/UKPLab/sentence-transformers) or higher.
 
 ```python
 >>> from sentence_transformers import SentenceTransformer
