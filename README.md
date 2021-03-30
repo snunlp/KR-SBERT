@@ -16,7 +16,7 @@ KR-BERT-MEDIUM https://github.com/snunlp/KR-BERT-MEDIUM
 
 ## How to download the KR-SBERT model in Linux or MacOS
 
-```
+```bash
 $ git clone https://github.com/snunlp/KR-SBERT
 $ curl -c ./cookie -s -L "https://drive.google.com/uc?export=download&id=1QUyp6p0bHzjz1-WSGvdcNxfAAbXxdD7R" > /dev/null
 $ curl -Lb ./cookie "https://drive.google.com/uc?export=download&confirm=`awk '/download/ {print $NF}' ./cookie`&id=1QUyp6p0bHzjz1-WSGvdcNxfAAbXxdD7R" -o ./pytorch_model.bin
@@ -25,7 +25,7 @@ $ mv ./pytorch_model.bin ./KR-SBERT/kr-sbert/0_Transformer/pytorch_model.bin
 
 ## How to use the KR-SBERT model in Python
 
-```
+```python
 >>> from sentence_transformers import SentenceTransformer
 >>> from sklearn.metrics.pairwise import cosine_similarity
 >>> model = SentenceTransformer('kr-sbert')
@@ -43,7 +43,7 @@ $ mv ./pytorch_model.bin ./KR-SBERT/kr-sbert/0_Transformer/pytorch_model.bin
 
 + Paraphrase pair detection ([download](https://drive.google.com/file/d/1trEt1QcRG2XLxMqf0ZwIVIZGDweC3VdM/view?usp=sharing))
 
-```
+```python
 from sentence_transformers import SentenceTransformer
 import pandas as pd
 from sklearn.metrics.pairwise import cosine_similarity
