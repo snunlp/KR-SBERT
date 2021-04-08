@@ -12,7 +12,7 @@ KR-BERT-MEDIUM https://github.com/snunlp/KR-BERT-MEDIUM
 
 ### 1_Pooling
 
-768 dimensions, mean-pooling
+768 dimensions, mean-pooling and pre-training on KorNLI & KorSTS
 
 ## How to download the KR-SBERT model in Linux or MacOS
 
