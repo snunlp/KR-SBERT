@@ -72,7 +72,7 @@ data[['paraphrase', 'similarity']].to_csv('paraphrase-results.csv')
 
 ## Application for document classification
 
-Tutorial in Google Colab: https://colab.research.google.com/drive/1xwn0gFMUhUeGaVrAOPwApyVyFfsUm5zD
+Tutorial in Google Colab: https://colab.research.google.com/drive/1S6WSjOx9h6Wh_rX1Z2UXwx9i_uHLlOiM
 
 ## Dependencies
 
