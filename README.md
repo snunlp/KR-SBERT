@@ -2,28 +2,13 @@
 
 A pretrained Korean-specific [Sentence-BERT](https://github.com/UKPLab/sentence-transformers) model developed by [Computational Linguistics Lab](http://knlp.snu.ac.kr/) at Seoul National University.
 
-## Model
+## Model Pre-training & Fine-tuning
 
-+ KR-SBERT pytorch model ([download](https://drive.google.com/file/d/1QUyp6p0bHzjz1-WSGvdcNxfAAbXxdD7R/view?usp=sharing))
+KR-BERT-V40K
 
-### 0_Transformer
+KLUE-NLI
 
-KR-BERT-MEDIUM https://github.com/snunlp/KR-BERT-MEDIUM
-
-### 1_Pooling
-
-768 dimensions, mean-pooling and pre-training on KorNLI & KorSTS
-
-## How to download the KR-SBERT model in Linux or MacOS
-
-Clone this repository and download the pytorch model file from Google Drive.
-
-```bash
-$ git clone https://github.com/snunlp/KR-SBERT
-$ curl -c ./cookie -s -L "https://drive.google.com/uc?export=download&id=1QUyp6p0bHzjz1-WSGvdcNxfAAbXxdD7R" > /dev/null
-$ curl -Lb ./cookie "https://drive.google.com/uc?export=download&confirm=`awk '/download/ {print $NF}' ./cookie`&id=1QUyp6p0bHzjz1-WSGvdcNxfAAbXxdD7R" -o ./pytorch_model.bin
-$ mv ./pytorch_model.bin ./KR-SBERT/kr-sbert/0_Transformer/pytorch_model.bin
-```
+KorSTS-augmented
 
 ## How to use the KR-SBERT model in Python
 
