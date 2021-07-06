@@ -58,7 +58,7 @@ from sentence_transformers import SentenceTransformer
 import pandas as pd
 from sklearn.metrics.pairwise import cosine_similarity
 
-model = SentenceTransformer('KR-BERT/kr-sbert')
+model = SentenceTransformer('KR-BERT/KR-SBERT-V40K-klueNLI-augSTS')
 data = pd.read_csv('path/to/the/dataset')
 
 vec1 = model.encode(data['sent1'], show_progress_bar=True, batch_size=32)
