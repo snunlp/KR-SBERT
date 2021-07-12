@@ -7,8 +7,10 @@ A pretrained Korean-specific [Sentence-BERT](https://github.com/UKPLab/sentence-
 ### Download
 
 ```bash
-$ git clone https://github.com/snunlp/KR-SBERT.git
+$ git lfs clone https://github.com/snunlp/KR-SBERT.git
 ```
+
+You may need to install [git-lfs](https://git-lfs.github.com/) first.
 
 ### Usage
 We recommend Python 3.6 or higher, [scikit-learn v0.23.2](https://scikit-learn.org/stable/install.html) or higher and [sentence-transformers v0.4.1](https://github.com/UKPLab/sentence-transformers) or higher.
