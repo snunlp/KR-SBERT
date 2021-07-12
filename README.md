@@ -42,7 +42,7 @@ Using a pre-trained BERT model, a sentence is segmented into WordPiece tokens, o
 
 Two sentence vectors are fed into a classifier for fine-tuning. Then, a siamese network trains the BERT weight parameters to reflect the relation between the two sentences. Finally, we fine-tune the SBERT model on the [KLUE-NLI](https://github.com/KLUE-benchmark/KLUE) dataset and the augmented [KorSTS](https://github.com/kakaobrain/KorNLUDatasets) dataset.
 
-![](https://raw.githubusercontent.com/snunlp/KR-SBERT/main/sbert-siamese.png)
+![](https://raw.githubusercontent.com/snunlp/KR-SBERT/main/sbert-siamese-draw.png)
 
 ### Augmenting KorSTS dataset
 
