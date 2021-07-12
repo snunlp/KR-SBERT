@@ -48,7 +48,7 @@ Two sentence vectors are fed into a classifier for fine-tuning. Then, a siamese 
 
 We augment the KorSTS dataset using the [in-domain straregy](https://www.sbert.net/examples/training/data_augmentation/README.html) proposed by [Thakur et al. (2021)](https://aclanthology.org/2021.naacl-main.28/).
 
-![](https://raw.githubusercontent.com/snunlp/KR-SBERT/main/sbert-augmentation.png)
+![](https://raw.githubusercontent.com/snunlp/KR-SBERT/main/sbert-augmentation-draw.png)
 
 ## Test datasets
 
