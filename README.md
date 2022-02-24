@@ -7,7 +7,7 @@ A pretrained Korean-specific [Sentence-BERT](https://github.com/UKPLab/sentence-
 ### Download
 
 ```bash
-$ GIT_LFS_SKIP_SMUDGE=1 git clone https://github.com/snunlp/KR-SBERT.git
+$ git clone https://github.com/snunlp/KR-SBERT.git
 $ wget --load-cookies /tmp/cookies.txt "https://docs.google.com/uc?export=download&confirm=$(wget --quiet --save-cookies /tmp/cookies.txt --keep-session-cookies --no-check-certificate 'https://docs.google.com/uc?export=download&id=1vNmk_80AYwOR_GbJsWcgVPGPJjjZMY0E' -O- | sed -rn 's/.*confirm=([0-9A-Za-z_]+).*/\1\n/p')&id=1vNmk_80AYwOR_GbJsWcgVPGPJjjZMY0E" -O KR-SBERT.zip && rm -rf /tmp/cookies.txt
 $ unzip KR-SBERT.zip
 ```
