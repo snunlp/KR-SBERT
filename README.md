@@ -9,7 +9,7 @@ We recommend Python 3.6 or higher and [sentence-transformers v2.2.0](https://git
 
 ```python
 >>> from sentence_transformers import SentenceTransformer, util
->>> model = SentenceTransformer('snunlp/KR-SBERT-V40K-klueNLI-augSTS') # or your file path
+>>> model = SentenceTransformer('snunlp/KR-SBERT-V40K-klueNLI-augSTS') 
 >>> sentences = ['잠이 옵니다', '졸음이 옵니다', '기차가 옵니다']
 >>> vectors = model.encode(sentences) # encode sentences into vectors
 >>> similarities = util.cos_sim(vectors, vectors) # compute similarity between sentence vectors
@@ -86,7 +86,7 @@ Tutorial in Google Colab: https://colab.research.google.com/drive/1S6WSjOx9h6Wh_
 @misc{kr-sbert,
   author = {Park, Suzi and Hyopil Shin},
   title = {KR-SBERT: A Pre-trained Korean-specific Sentence-BERT model},
-  year = {2022},
+  year = {2021},
   publisher = {GitHub},
   journal = {GitHub repository},
   howpublished = {\url{https://github.com/snunlp/KR-SBERT}}
