@@ -4,28 +4,19 @@ A pretrained Korean-specific [Sentence-BERT](https://github.com/UKPLab/sentence-
 
 ## How to use the KR-SBERT model in Python
 
-### Download
-
-```bash
-$ git clone https://github.com/snunlp/KR-SBERT.git
-$ wget --load-cookies /tmp/cookies.txt "https://docs.google.com/uc?export=download&confirm=$(wget --quiet --save-cookies /tmp/cookies.txt --keep-session-cookies --no-check-certificate 'https://docs.google.com/uc?export=download&id=1vNmk_80AYwOR_GbJsWcgVPGPJjjZMY0E' -O- | sed -rn 's/.*confirm=([0-9A-Za-z_]+).*/\1\n/p')&id=1vNmk_80AYwOR_GbJsWcgVPGPJjjZMY0E" -O KR-SBERT.zip && rm -rf /tmp/cookies.txt
-$ unzip KR-SBERT.zip
-```
-
 ### Usage
-We recommend Python 3.6 or higher, [scikit-learn v0.23.2](https://scikit-learn.org/stable/install.html) or higher and [sentence-transformers v2.2.0](https://github.com/UKPLab/sentence-transformers) or higher.
+We recommend Python 3.6 or higher and [sentence-transformers v2.2.0](https://github.com/UKPLab/sentence-transformers) or higher.
 
 ```python
->>> from sentence_transformers import SentenceTransformer
->>> from sklearn.metrics.pairwise import cosine_similarity
->>> model = SentenceTransformer('KR-SBERT/KR-SBERT-V40K-klueNLI-augSTS') # or your file path
+>>> from sentence_transformers import SentenceTransformer, util
+>>> model = SentenceTransformer('snunlp/KR-SBERT-V40K-klueNLI-augSTS') # or your file path
 >>> sentences = ['잠이 옵니다', '졸음이 옵니다', '기차가 옵니다']
 >>> vectors = model.encode(sentences) # encode sentences into vectors
->>> similarities = cosine_similarity(vectors) # compute similarity between sentence vectors
+>>> similarities = util.cos_sim(vectors, vectors) # compute similarity between sentence vectors
 >>> print(similarities)
-[[0.9999999  0.65774536 0.27321893]
- [0.65774536 1.         0.2729605 ]
- [0.27321893 0.2729605  1.0000002 ]]
+tensor([[1.0000, 0.6577, 0.2732],
+        [0.6577, 1.0000, 0.2730],
+        [0.2732, 0.2730, 1.0000]])
 
 ```
 
@@ -56,18 +47,17 @@ We augment the KorSTS dataset using the [in-domain straregy](https://www.sbert.n
     + source: National Institute of Korean Language, [모두의 말뭉치](https://corpus.korean.go.kr/).
 
 ```python
-from sentence_transformers import SentenceTransformer
+from sentence_transformers import SentenceTransformer, util
 import pandas as pd
-from sklearn.metrics.pairwise import cosine_similarity
 
-model = SentenceTransformer('KR-BERT/KR-SBERT-V40K-klueNLI-augSTS')
+model = SentenceTransformer('snunlp/KR-SBERT-V40K-klueNLI-augSTS')
 data = pd.read_csv('path/to/the/dataset')
 
 vec1 = model.encode(data['sent1'], show_progress_bar=True, batch_size=32)
 vec2 = model.encode(data['sent2'], show_progress_bar=True, batch_size=32)
 
 data['similarity'] = [
-    cosine_similarity([sent1, sent2])[0][1]
+    util.cos_sim(sent1, sent2).squeeze()
     for sent1, sent2 in tqdm(zip(vec1, vec2), total=len(data))
 ]
 
