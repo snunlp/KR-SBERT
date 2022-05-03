@@ -90,3 +90,15 @@ Tutorial in Google Colab: https://colab.research.google.com/drive/1S6WSjOx9h6Wh_
 ## Dependencies
 
 + `sentence_transformers` (https://github.com/UKPLab/sentence-transformers)
+
+## Citation
+```bibtex
+@misc{kr-sbert,
+  author = {Park, Suzi and Hyopil Shin},
+  title = {KR-SBERT: A Pre-trained Korean-specific Sentence-BERT model},
+  year = {2022},
+  publisher = {GitHub},
+  journal = {GitHub repository},
+  howpublished = {\url{https://github.com/snunlp/KR-SBERT}}
+}
+```
